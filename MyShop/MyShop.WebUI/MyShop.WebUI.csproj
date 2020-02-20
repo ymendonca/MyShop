@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductCategoryManagementController.cs" />
     <Compile Include="Controllers\ProductManagementController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -167,6 +168,10 @@
     <Content Include="Views\ProductManagement\Create.cshtml" />
     <Content Include="Views\ProductManagement\Edit.cshtml" />
     <Content Include="Views\ProductManagement\Delete.cshtml" />
+    <Content Include="Views\ProductCategoryManagement\Index.cshtml" />
+    <Content Include="Views\ProductCategoryManagement\Create.cshtml" />
+    <Content Include="Views\ProductCategoryManagement\Edit.cshtml" />
+    <Content Include="Views\ProductCategoryManagement\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

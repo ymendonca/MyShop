@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MyShop.Core.Models;
+using MyShop.Core.ViewModels;
 using MyShop.DataAccess.InMemory;
 
 namespace MyShop.WebUI.Controllers
@@ -11,10 +12,12 @@ namespace MyShop.WebUI.Controllers
     public class ProductManagementController : Controller
     {
         ProductRepository context;
-
+        //adcionado pela utizacao de viewmodel 
+        ProductCategoryRepository productCategories;
         public ProductManagementController()
         {
             context = new ProductRepository();
+            productCategories = new ProductCategoryRepository(); // inicializacao do produto categoria (viewmodel)
         }
         // GET: ProductManagement
         public ActionResult Index()
@@ -26,8 +29,12 @@ namespace MyShop.WebUI.Controllers
         //metodo para criar produto
         public ActionResult Create()
         {
-            Product product = new Product();
-            return View(product);
+            ProductManagerViewModel viewModel = new ProductManagerViewModel();
+              
+            // Product product = new Product();
+            viewModel.Product = new Product();
+            viewModel.ProductCategories = productCategories.Collection();
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -55,7 +62,11 @@ namespace MyShop.WebUI.Controllers
             }
             else
             {
-                return View(product);
+                ProductManagerViewModel viewModel = new ProductManagerViewModel();
+                viewModel.Product = product;
+                viewModel.ProductCategories = productCategories.Collection();
+                //return View(product);
+                return View(viewModel);
             }
         }
 
