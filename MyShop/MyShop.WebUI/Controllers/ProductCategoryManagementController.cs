@@ -18,7 +18,7 @@ namespace MyShop.WebUI.Controllers
         // GET: ProductCategoryManagement
         public ActionResult Index()
         {
-            List<ProductCategory> productCateggoriess = context.Collection().ToList();
+            List<ProductCategory> productCateggoriess = context.Collection().ToList();   
             return View(productCateggoriess);
         }
 
