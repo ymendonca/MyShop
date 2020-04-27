@@ -38,7 +38,7 @@ namespace MyShop.DataAccess.InMemory
         {
             T tToUpdate = items.Find(i => i.Id == t.Id);
 
-            if(tToUpdate!= null)
+            if(tToUpdate != null)
             {
                 tToUpdate = t;
             }
