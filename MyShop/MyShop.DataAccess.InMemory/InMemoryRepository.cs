@@ -15,7 +15,7 @@ namespace MyShop.DataAccess.InMemory
         ObjectCache cache = MemoryCache.Default;
         List<T> items;
         string className;
-           
+
         public InMemoryRepository()
         {
             className = typeof(T).Name;
