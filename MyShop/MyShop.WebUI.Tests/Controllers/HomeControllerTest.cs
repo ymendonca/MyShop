@@ -45,7 +45,8 @@ namespace MyShop.WebUI.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ViewResult result = controller.Contact()
+                                as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
