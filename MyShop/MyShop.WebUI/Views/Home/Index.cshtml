@@ -6,7 +6,7 @@
 
 
 <h1>Products</h1>
-<div class="col-md-10">
+<div class="col-md-2">
     <h4>Filter by Category</h4>
     <div class="list-group">
         @Html.ActionLink("All", "Index", null, new { @class = Request["Category"]==null? "list-group-item active": "list-group-item" })
@@ -22,7 +22,7 @@
     {
         <div class="col-md-4" style="height:450px;padding:10px;margin:10px;border:solid thin whitesmoke">
             <div class="col-md-12">
-                <img class="img" style="height:200px" src="~/Content/ProductImage/@item.Image" />
+                <img class="img" style="height:250px" src="~/Content/ProductImage/@item.Image" />
             </div>
             <div class="col-md-12">
                 <strong>@Html.ActionLink(item.Name, "Details", new { id = item.Id })</strong>
@@ -33,7 +33,7 @@
             <div>
                 <h4>@item.Price</h4>
             </div>
-            <div class="col-md-12">
+            <div class="col-md-4">
                 <a href="#" class="btn btn-default">Add to Basket</a>
             </div>
         </div>
