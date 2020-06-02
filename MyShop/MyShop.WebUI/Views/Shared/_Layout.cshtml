@@ -24,6 +24,9 @@
                     <li>@Html.ActionLink("Product Admin", "Index", "ProductManagement")</li>
                     <li>@Html.ActionLink("Categories Admin", "Index", "ProductCategoryManagement")</li>
                 </ul>
+                @{
+                    Html.RenderAction("BasketSummary", "Basket");
+                  }
             </div>
         </div>
     </div>
